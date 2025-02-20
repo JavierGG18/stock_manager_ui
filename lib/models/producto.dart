@@ -26,6 +26,18 @@ class Producto {
     );
   }
 
+  // Método para convertir el objeto Producto a JSON
+  Map<String, dynamic> toJson() {
+    return {
+      "nombre": nombre,
+      "precio": precio,
+      "stock": stock,
+      "marca": marca,
+      "categoria": categoria,
+      "status": status
+    };
+  }
+
   // Método para generar el slug a partir del nombre del producto
   String getSlug() {
     return nombre
